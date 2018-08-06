@@ -5,11 +5,11 @@ const prev = document.getElementById('prevPhoto');
 const next = document.getElementById('nextPhoto');
 let image_i = 0;
 
-const src = ["https://netology-code.github.io/hj-homeworks/browser/gallery/i/breuer-building.jpg",
-             "https://netology-code.github.io/hj-homeworks/browser/gallery/i/guggenheim-museum.jpg",
-             "https://netology-code.github.io/hj-homeworks/browser/gallery/i/headquarters.jpg",
-             "https://netology-code.github.io/hj-homeworks/browser/gallery/i/IAC.jpg",
-             "https://netology-code.github.io/hj-homeworks/browser/gallery/i/new-museum.jpg"];
+const src = ["./i/breuer-building.jpg",
+             "./i/guggenheim-museum.jpg",
+             "./i/headquarters.jpg",
+             "./i/IAC.jpg",
+             "./i/new-museum.jpg"];
 
 setImage();
 
