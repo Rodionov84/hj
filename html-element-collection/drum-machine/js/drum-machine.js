@@ -6,8 +6,10 @@ for (let drum of drums) {
   drum.addEventListener('click', () => {
   	for (let element of drum.children) {
   	  if (element.nodeName === "AUDIO") {
+  	  	element.currentTime = 0.0;
   	    element.play();
   	  }
   	}
   });
 }
+

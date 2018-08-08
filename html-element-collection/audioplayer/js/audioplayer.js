@@ -32,7 +32,7 @@ audio.addEventListener('ended', () => {
 });
 
 function setSound(sound) {
-  const isPlay = audio.played;
+  const isPlay = !audio.paused;
 
   audio.src = sound.src;
   title.title = sound.name;
