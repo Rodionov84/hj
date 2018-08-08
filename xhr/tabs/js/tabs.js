@@ -8,10 +8,10 @@ const nav = tabs.getElementsByTagName('nav')[0].children;
 const content = document.getElementById('content');
 const preloader = document.getElementById('preloader');
 
-for(let a of nav)
-{
+for (let a of nav) {
   a.addEventListener('click', openTab);
 }
+
 tabs.querySelector('.active').click();
 
 function openTab(event) {
@@ -19,8 +19,7 @@ function openTab(event) {
 
   preloader.classList.remove('hidden');
 
-  for(let a of nav)
-  {
+  for (let a of nav) {
     a.classList.remove('active');
   }
   event.target.classList.add('active');
@@ -29,8 +28,7 @@ function openTab(event) {
   request.send();
 }
 
-function onReadyTab()
-{
+function onReadyTab() {
   if (request.status === 200 && request.readyState === 4) {
     content.innerHTML = request.responseText;
   }

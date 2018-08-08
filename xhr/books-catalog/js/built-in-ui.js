@@ -9,14 +9,12 @@ request.send();
 
 document.getElementById('close').addEventListener('click', toggleCardVisible);
 
-function onReadyBooks()
-{
+function onReadyBooks() {
   content.innerHTML = '';
   if (request.status === 200 && request.readyState === 4) {
     const books = JSON.parse(request.responseText);
 
-    for(let book of books)
-    {
+    for (let book of books) {
       let img = document.createElement('img');
       img.src = book.cover.small;
 
