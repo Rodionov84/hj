@@ -3,6 +3,26 @@
 const cart = document.getElementById('quick-cart');
 const addToCartForm = document.getElementById('AddToCartForm');
 const addToCartXhr = new XMLHttpRequest();
+const bigImage = document.getElementById('big-image');
+const thumbImages = document.querySelectorAll('.thumb-image');
+
+for(const thumb of thumbImages)
+{
+  thumb.addEventListener('click', thumbClick);
+}
+
+function thumbClick(event)
+{
+  event.preventDefault();
+
+  for(const thumb of thumbImages)
+  {
+    thumb.classList.remove('active');
+  }
+
+  this.classList.add('active');
+  bigImage.style.backgroundImage = 'url(' + this.href + ')';
+}
 
 addToCartForm.addEventListener('submit', (event) => {
   event.preventDefault();
